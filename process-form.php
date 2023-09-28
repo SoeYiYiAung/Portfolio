@@ -8,6 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = "Message from $name";
     $headers = "From: $email";
 
-    mail($to, $subject, $message, $headers);
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Email sent successfully.";
+    } else {
+        echo "Email sending failed.";
+    }
 }
+
 ?>
