@@ -1,3 +1,21 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+    $to = "syya133@gmail.com"; 
+
+    $subject = "Message from $name";
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Email sent successfully.";
+    } else {
+        echo "Email sending failed.";
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -592,8 +610,7 @@
             <div class="contact-form">
               <h4 class="mb-4">Interested to work together? Let's talk</h4>
 
-              <!-- <form action="/process-form.php" method="post"> -->
-              <form action="/process-form.php" method="POST" >
+              <form action="/index.php" method="POST" >
                 <div class="row">
                   <div class="col-lg-6 col-12">
                     <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
