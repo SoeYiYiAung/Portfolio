@@ -284,7 +284,9 @@ b, strong {
   background: #0c0c0d;
 }
 .dark-mode .navbar-light .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8) */
+  color: #ffffff;
+
 }
 .dark-mode .navbar-light .navbar-nav .nav-link:hover {
   color: #ffc200;
@@ -309,6 +311,11 @@ b, strong {
   color: #ffffff;
 }
 
+.dark-mode .timeline-wrapper span{
+  color: #ffffff;
+
+}
+
 .timeline-wrapper {
   position: relative;
   padding: 22px 0;
@@ -329,8 +336,8 @@ b, strong {
   background: #474559;
   border-radius: 50%;
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   line-height: 75px;
   text-align: center;
 }
@@ -587,7 +594,7 @@ b, strong {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-align: center;
   animation: fade-in 1s ease-in-out; 
-  height: 450px;
+  height: 480px;
 }
 
 .card img{
@@ -653,6 +660,36 @@ b, strong {
     width: 50%; /* Fill up the progress bar */
   }
 }
+/* CSS animation for typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+
+.profile-card {
+  transition: background-color 0.3s, box-shadow 0.3s;
+  height: auto;
+}
+
+.profile-card:hover {
+  background-color: #f8f8f8; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.profile-card:hover .profile {
+  color: #ebc033 !important;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+}
+.footer p {
+  display: inline-block;
+  margin: 0 10px;
+}
+
 
 
 
