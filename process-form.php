@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $message = $_POST["message"];
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Email sending failed.";
     }
-}
+// }
 
 
 ?>
