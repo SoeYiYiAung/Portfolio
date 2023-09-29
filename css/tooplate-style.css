@@ -575,7 +575,7 @@ b, strong {
 .tm-info-label {
   /* font-weight: bold; */
   display: inline-block;
-  width: 90px;
+  /* width: 90px; */
 }
 .tm-progress {
   background: #fff;
