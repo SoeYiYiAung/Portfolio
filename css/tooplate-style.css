@@ -695,4 +695,14 @@ b, strong {
   margin: 0 10px;
 }
 
+div.gallery:hover {
+  border: 1px solid #ffc200;
+}
+
+.certificates img{
+  height: 250px;
+  width: 100%;
+}
+
+
 
