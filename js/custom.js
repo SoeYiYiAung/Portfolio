@@ -131,3 +131,15 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("scroll", checkVisibility);
   checkVisibility();
 });
+
+const form = document.getElementById('myForm');
+function submitFormAndRedirect() {
+    form.submit();
+    setTimeout(function() {
+        window.location.href = 'https://soeyiyiaung.netlify.app/thanks.html';
+    }, 1000); 
+}
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    submitFormAndRedirect(); 
+});
