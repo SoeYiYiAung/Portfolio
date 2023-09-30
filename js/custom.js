@@ -137,7 +137,7 @@ function submitFormAndRedirect() {
     form.submit();
     setTimeout(function() {
         window.location.href = 'https://soeyiyiaung.netlify.app/thanks.html';
-    }, 1000); 
+    }, 1); 
 }
 form.addEventListener('submit', function(event) {
     event.preventDefault(); 
