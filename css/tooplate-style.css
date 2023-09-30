@@ -777,3 +777,14 @@ div.gallery:hover {
   transition: opacity 1s ease, transform 1s ease;
 }
 
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 5s ease, transform 1s ease;
+}
+
+.card-container .card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+

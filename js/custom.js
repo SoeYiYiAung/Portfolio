@@ -115,3 +115,19 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("scroll", checkVisibility);
   checkVisibility(); 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const projectCards = document.querySelectorAll(".card");
+
+  function checkVisibility() {
+      projectCards.forEach(function(card) {
+          const bounding = card.getBoundingClientRect();
+          if (bounding.top < window.innerHeight) {
+              card.style.opacity = "1";
+              card.style.transform = "translateY(0)";
+          }
+      });
+  }
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility();
+});
