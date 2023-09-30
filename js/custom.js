@@ -36,3 +36,38 @@
 })(jQuery);
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  const skills = document.querySelectorAll(".skill");
+
+  function checkVisibility() {
+      skills.forEach(function(skill) {
+          const bounding = skill.getBoundingClientRect();
+          if (bounding.top < window.innerHeight) {
+              skill.style.opacity = "1";
+              skill.style.transform = "translateY(0)";
+          }
+      });
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); // Check initial visibility
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const certificates = document.querySelectorAll(".gallery");
+
+    function checkVisibility() {
+        certificates.forEach(function(certificate) {
+            const bounding = certificate.getBoundingClientRect();
+            if (bounding.top < window.innerHeight) {
+                certificate.style.opacity = "1";
+                certificate.style.transform = "translateY(0)";
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Check initial visibility
+});
+
