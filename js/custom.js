@@ -132,14 +132,14 @@ document.addEventListener("DOMContentLoaded", function() {
   checkVisibility();
 });
 
-const form = document.getElementById('myForm');
-function submitFormAndRedirect() {
-    form.submit();
-    setTimeout(function() {
-        window.location.href = 'https://soeyiyiaung.netlify.app/thanks.html';
-    }, 1); 
-}
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); 
-    submitFormAndRedirect(); 
-});
+// const form = document.getElementById('myForm');
+// function submitFormAndRedirect() {
+//     form.submit();
+//     setTimeout(function() {
+//         window.location.href = 'https://soeyiyiaung.netlify.app/thanks.html';
+//     }, 1); 
+// }
+// form.addEventListener('submit', function(event) {
+//     event.preventDefault(); 
+//     submitFormAndRedirect(); 
+// });
