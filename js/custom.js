@@ -48,9 +48,8 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       });
   }
-
   window.addEventListener("scroll", checkVisibility);
-  checkVisibility(); // Check initial visibility
+  checkVisibility(); 
 });
 
 
@@ -66,8 +65,53 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-
     window.addEventListener("scroll", checkVisibility);
-    checkVisibility(); // Check initial visibility
+    checkVisibility(); 
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const contactForm = document.querySelector(".contact-form");
+
+  function checkVisibility() {
+      const bounding = contactForm.getBoundingClientRect();
+      if (bounding.top < window.innerHeight) {
+          contactForm.style.opacity = "1";
+          contactForm.style.transform = "translateY(0)";
+      }
+  }
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); 
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const timelineItems = document.querySelectorAll(".timeline-info");
+
+  function checkVisibility() {
+      timelineItems.forEach(function(item) {
+          const bounding = item.getBoundingClientRect();
+          if (bounding.top < window.innerHeight) {
+              item.style.opacity = "1";
+              item.style.transform = "translateY(0)";
+          }
+      });
+  }
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); 
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const profileItems = document.querySelectorAll(".profile");
+
+  function checkVisibility() {
+      profileItems.forEach(function(item) {
+          const bounding = item.getBoundingClientRect();
+          if (bounding.top < window.innerHeight) {
+              item.style.opacity = "1";
+              item.style.transform = "translateY(0)";
+          }
+      });
+  }
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); 
+});
