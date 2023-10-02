@@ -5,3 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
         element.style.transform = "translateY(0)";
     });
 });
+
+
+setTimeout(function() {
+    window.location.href = "https://soeyiyiaung.netlify.app";
+}, 5000);
