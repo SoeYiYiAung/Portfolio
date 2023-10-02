@@ -20,6 +20,16 @@
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    <script>
+      // Push a new state to the browser's history, effectively replacing the current state.
+      history.pushState(null, null, document.URL);
+    
+      // Add a listener for the 'popstate' event, which fires when the user navigates back.
+      window.addEventListener('popstate', function(event) {
+        // Push another state to prevent going back.
+        history.pushState(null, null, document.URL);
+      });
+    </script>
   </head>
   <body>
 
