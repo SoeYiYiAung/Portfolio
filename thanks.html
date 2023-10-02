@@ -4,8 +4,8 @@
 
     <script>
         // Push a new state to the browser's history, effectively replacing the current state.
-        history.pushState(null, null, document.URL);
-      
+        // history.pushState(null, null, document.URL);   
+        history.replaceState(null, null, document.URL);   
         // Add a listener for the 'popstate' event, which fires when the user navigates back.
         window.addEventListener('popstate', function(event) {
           // Push another state to prevent going back.
