@@ -9,4 +9,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 setTimeout(function() {
     window.location.href = "https://soeyiyiaung.netlify.app";
-}, 5000);
+}, 10000);
