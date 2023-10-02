@@ -132,14 +132,12 @@ document.addEventListener("DOMContentLoaded", function() {
   checkVisibility();
 });
 
-// const form = document.getElementById('myForm');
-// function submitFormAndRedirect() {
-//     form.submit();
-//     setTimeout(function() {
-//         window.location.href = 'https://soeyiyiaung.netlify.app/thanks.html';
-//     }, 1); 
-// }
-// form.addEventListener('submit', function(event) {
-//     event.preventDefault(); 
-//     submitFormAndRedirect(); 
-// });
+
+// Push a new state to the browser's history, effectively replacing the current state.
+history.pushState(null, null, document.URL);
+
+// Add a listener for the 'popstate' event, which fires when the user navigates back.
+window.addEventListener('popstate', function(event) {
+  // Push another state to prevent going back.
+  history.pushState(null, null, document.URL);
+});
